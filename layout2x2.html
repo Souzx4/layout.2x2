@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="midia/html-5--v1.ico">
+    <title>layout</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!--sempre usar esse link quando utilizar css interno-->
+
+    <!--CSS interno para layout 2x2-->
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centraliza todo o conteúdo de texto dentro do body */
+        }
+
+        h1 {
+            margin: 40px 0 20px 0; 
+        } /*Isso ajuda a dar um espaçamento visual agradável entre o título e o restante do conteúdo.*/
+
+        #conteiner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-items: center;
+            padding: 20px; 
+            max-width: 800px;
+            margin: 0 auto;
+
+            /*display: grid; Define que o elemento com id="conteiner" será um grid layout (estrutura de linhas e colunas).
+
+            grid-template-columns: repeat(2, 1fr); Cria duas colunas de tamanhos iguais (1fr = 1 fração do espaço disponível).
+
+            gap: 20px; Define um espaçamento de 20px entre os itens do grid, tanto na horizontal quanto na vertical.
+
+            justify-items: center; Centraliza cada item individualmente dentro de sua célula do grid.
+
+            padding: 20px;  Aplica um espaço interno de 20px em todos os lados do #conteiner.
+
+            max-width: 800px; Limita a largura máxima do contêiner a 800px, mesmo em telas grandes.
+
+            margin: 0 auto; Centraliza o contêiner horizontalmente na tela (margem automática à esquerda e à direita).*/
+        }
+
+        .item-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+
+            /*Aplica estilo para imagens dentro de um elemento com classe .item-image.
+
+            width: 100%; → Faz a imagem ocupar 100% da largura do elemento pai.
+
+            max-width: 400px; → Garante que a imagem nunca ultrapasse 400px de largura.
+
+            border-radius: 10px; → Arredonda os cantos da imagem com raio de 10px.*/
+        }
+
+        a {
+            text-decoration: none;
+            /*Remove o sublinhado padrão dos links (<a href="">), deixando-os mais limpos visualmente.*/
+        }
+    </style>
+</head>
+<body>
+    <h1>visitem esses videos</h1>
+    <div id="conteiner">
+        <div class="item-image">
+            <a href="sub.html"  rel="noopener noreferrer">
+            <img src="midia/paisagem.png" alt="paisagem">
+            </a>
+        </div>
+        <div class="item-image">
+            <a href="sub2.html"  rel="noopener noreferrer">
+                <img src="midia/igreja.png" alt="paisagem">
+            </a>
+        </div>
+        <div class="item-image">
+            <a href="sub3.html"  rel="noopener noreferrer">
+                <img src="midia/porto.png" alt="paisagem">
+            </a>
+        </div>
+        <div class="item-image">
+            <a href="sub4.html"  rel="noopener noreferrer">
+                <img src="midia/cristo.png" alt="paisagem">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
